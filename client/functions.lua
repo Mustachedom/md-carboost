@@ -114,7 +114,7 @@ CreateThread(function()
 lib.requestModel("ig_priest", 1000)
 	local laptopsales = Config.LaptopSale
 	
-	 laptopseller = CreatePed(0, current,laptopsales.x,laptopsales.y,laptopsales.z-1,  false, false)
+	 laptopseller = CreatePed(0, "ig_priest",laptopsales.x,laptopsales.y,laptopsales.z-1,  false, false)
              FreezeEntityPosition(laptopseller, true)
             SetEntityInvincible(laptopseller, true)
 local options = {
@@ -126,5 +126,5 @@ local options = {
 							
 			}
 }
-exports.ox_target:addEntity(laptopsales, options)
+exports.ox_target:addLocalEntity(laptopseller, options)
 end)
