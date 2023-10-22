@@ -31,10 +31,10 @@ RegisterServerEvent('md-carboost:server:getcopsd', function()
 				end)
 				
 		else
-    	TriggerClientEvent('QBCore:Notify', src,  'Need at least 5 Minutes before ordering another boost' )
+    	    	TriggerClientEvent('ox_lib:notify', src, { description = "You Need 5 Minutes To Order A Boost", type = "error"})
 		end	
     else
-    	TriggerClientEvent('QBCore:Notify', src,  'Need at least '..Config.ActivePolice.. ' police to boost a car')
+    	TriggerClientEvent('ox_lib:notify', src, { description = 'Need at least '..Config.ActivePolice.. ' police to boost a car', type = "error"})
     end
 end)
 
@@ -61,10 +61,10 @@ RegisterServerEvent('md-carboost:server:getcopsc', function()
 				end)
 				
 		else
-    	TriggerClientEvent('QBCore:Notify', src,  'Need at least 5 Minutes ' )
+    	    	TriggerClientEvent('ox_lib:notify', src, { description = "You Need 5 Minutes To Order A Boost", type = "error"})
 		end	
     else
-    	TriggerClientEvent('QBCore:Notify', src,  'Need at least '..Config.ActivePolice.. ' police to boost a car')
+    	TriggerClientEvent('ox_lib:notify', src, { description = 'Need at least '..Config.ActivePolice.. ' police to boost a car', type = "error"})
     end
 end)
 
@@ -91,10 +91,10 @@ RegisterServerEvent('md-carboost:server:getcopsb', function()
 				end)
 				
 		else
-    	TriggerClientEvent('QBCore:Notify', src,  'Need at least 5 Minutes ' )
+    	    	TriggerClientEvent('ox_lib:notify', src, { description = "You Need 5 Minutes To Order A Boost", type = "error"})
 		end	
     else
-    	TriggerClientEvent('QBCore:Notify', src,  'Need at least '..Config.ActivePolice.. ' police to boost a car')
+    	TriggerClientEvent('ox_lib:notify', src, { description = 'Need at least '..Config.ActivePolice.. ' police to boost a car', type = "error"})
     end
 end)
 
@@ -121,10 +121,10 @@ RegisterServerEvent('md-carboost:server:getcopsa', function()
 				end)
 				
 		else
-    	TriggerClientEvent('QBCore:Notify', src,  'Need at least 5 Minutes ' )
+    	    	TriggerClientEvent('ox_lib:notify', src, { description = "You Need 5 Minutes To Order A Boost", type = "error"})
 		end	
     else
-    	TriggerClientEvent('QBCore:Notify', src,  'Need at least '..Config.ActivePolice.. ' police to boost a car')
+    	TriggerClientEvent('ox_lib:notify', src, { description = 'Need at least '..Config.ActivePolice.. ' police to boost a car', type = "error"})
     end
 end)
 
@@ -151,10 +151,10 @@ RegisterServerEvent('md-carboost:server:getcopsvin', function()
 				end)
 				
 		else
-    	TriggerClientEvent('QBCore:Notify', src,  'Need at least 5 Minutes or 60 minutes between successful vin scratch' )
+    	    	TriggerClientEvent('ox_lib:notify', src, { description = "You Need 5 Minutes To Order A Vin Scratch Or 60 For Successful Vin Scratch", type = "error"})
 		end	
     else
-    	TriggerClientEvent('QBCore:Notify', src,  'Need at least '..Config.ActivePolice.. ' police to boost a car')
+    	TriggerClientEvent('ox_lib:notify', src, { description = 'Need at least '..Config.ActivePolice.. ' police to Vin Scratch a car', type = "error"})
     end
 end)
 
@@ -177,7 +177,7 @@ RegisterNetEvent('md-carboost:server:successfuldrop', function(deliveryData, inT
 			end)
 			
 	else
-	TriggerClientEvent('QBCore:Notify', src,  'Need at least 10 Minutes After A Boost' )
+	TriggerClientEvent('ox_lib:notify', src, { description = "You Need 10 Minutes To Order A Boost", type = "error"})
 	end	
     
 end)
@@ -198,7 +198,8 @@ RegisterNetEvent('md-carboost:server:successfuldropc', function(deliveryData, in
 				end)
 				
 	else
-		TriggerClientEvent('QBCore:Notify', src,  'Need at least 10 Minutes After A Boost' )
+	TriggerClientEvent('ox_lib:notify', src, { description = "You Need 10 Minutes To Order A Boost", type = "error"})
+	
 	end	
 
 end)
@@ -219,7 +220,8 @@ RegisterNetEvent('md-carboost:server:successfuldropb', function(deliveryData, in
 			end)
 			
 	else
-	TriggerClientEvent('QBCore:Notify', src,  'Need at least 10 Minutes After A Boost' )
+	TriggerClientEvent('ox_lib:notify', src, { description = "You Need 10 Minutes To Order A Boost", type = "error"})
+	
 	end	
     
 end)
@@ -240,7 +242,8 @@ RegisterNetEvent('md-carboost:server:successfuldropa', function(deliveryData, in
 			end)
 			
 	else
-	TriggerClientEvent('QBCore:Notify', src,  'Need at least 10 Minutes After A Boost' )
+	TriggerClientEvent('ox_lib:notify', src, { description = "You Need 10 Minutes To Order A Boost", type = "error"})
+	
 	end	
    
 end)
@@ -312,8 +315,9 @@ RegisterNetEvent('md-carboost:server:SaveCar', function(mods, vehicle, _, plate)
                 plate,
                 0
             })
-            TriggerClientEvent('QBCore:Notify', src, "You Scratched The Vin", 'success', 5000)
+           TriggerClientEvent('ox_lib:notify', src, { description = "You Scratched The Vin", type = "success"})
+	
         else
-            TriggerClientEvent('QBCore:Notify', src, "Already Owned", 'error', 3000)
+            TriggerClientEvent('ox_lib:notify', src, { description = "This Car Is Already Owned", type = "error"})
         end
 end)
