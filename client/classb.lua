@@ -61,7 +61,7 @@ AddEventHandler("md-carboost:client:ClassB", function()
 	 zonemath = lib.zones.sphere({
     coords = coords,
     radius = 4,
-    debug = true,
+    debug = false,
     inside = function()
 			 			
 			 end,
@@ -93,7 +93,7 @@ AddEventHandler("md-carboost:client:ClassB", function()
 			zonemath2 = lib.zones.sphere({
 			coords = location,
 			radius = 4,
-			debug = true,
+			debug = false,
 			inside = function()		
 				end,
 				onEnter = function()
