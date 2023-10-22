@@ -88,7 +88,7 @@ AddEventHandler("md-carboost:client:VinScratch", function()
 		zonemath = lib.zones.sphere({
 		coords = coords,
 		radius = 4,
-		debug = true,
+		debug = false,
 		inside = function()	
 				end,
 		onEnter = function()
@@ -120,7 +120,7 @@ AddEventHandler("md-carboost:client:VinScratch", function()
 				zonemath2 = lib.zones.sphere({
 				coords = location,
 				radius = 4,
-				debug = true,
+				debug = false,
 				inside = function()		
 					end,
 					onEnter = function()
