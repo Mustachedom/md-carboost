@@ -7,6 +7,13 @@ AddEventHandler("md-carboost:client:getcopsvin", function()
 	TriggerServerEvent('md-carboost:server:getcopsvin')
 
 end)
+local function getVehicleFromVehList(hash)
+	for _, v in pairs(QBCore.Shared.Vehicles) do
+		if hash == v.hash then
+			return v.model
+		end
+	end
+end
 
 RegisterNetEvent("md-carboost:client:VinScratch")
 AddEventHandler("md-carboost:client:VinScratch", function() 
