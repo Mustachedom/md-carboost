@@ -110,13 +110,13 @@ TaskVehicleShootAtPed(pilot2, PlayerPedId())
 
 end
 
-CreateThread(function()
-local laptopsales = CreatePed(26, "ig_priest",Config.LaptopSale,  true, false)
-SetEntityHeading(laptopsales, 280)
-Wait(1000)
-FreezeEntityPosition(laptopsales, true)
-SetEntityInvincible(laptopsales, true)
-
+CreateThread(function() 
+lib.requestModel("ig_priest", 1000)
+	local laptopsales = Config.LaptopSale
+	
+	 laptopseller = CreatePed(0, current,laptopsales.x,laptopsales.y,laptopsales.z-1,  false, false)
+             FreezeEntityPosition(laptopseller, true)
+            SetEntityInvincible(laptopseller, true)
 local options = {
 			{
 						 name = 'laptopsales',
@@ -126,19 +126,5 @@ local options = {
 							
 			}
 }
-exports.ox_target:addLocalEntity(laptopsales, options)
+exports.ox_target:addEntity(laptopsales, options)
 end)
-
-RegisterNetEvent("md-carboost:client:buylaptop")
-AddEventHandler("md-carboost:client:buylaptop", function() 
-TriggerServerEvent('md-carboost:server:buylaptop')
-end)
-
-
-local function getVehicleFromVehList(hash)
-	for _, v in pairs(QBCore.Shared.Vehicles) do
-		if hash == v.hash then
-			return v.model
-		end
-	end
-end
