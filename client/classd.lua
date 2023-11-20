@@ -34,7 +34,7 @@ AddEventHandler("md-carboost:client:ClassD", function()
 	 TriggerServerEvent('qb-phone:server:sendNewMail', {
                sender = "Car Boost",
                subject = "Get This For Me",
-               message = "You Are Looking for A " .. ModelHash.. " With A License Plate " .. QBCore.Functions.GetPlate(carboostb) .. " Hurry Up And Find It In The Zone",
+               message = "You Are Looking for A " .. ModelHash.. " With A License Plate " .. QBCore.Functions.GetPlate(carboostd) .. " Hurry Up And Find It In The Zone",
                button = {}
            })
 	----- spawns zone
