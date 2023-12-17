@@ -111,7 +111,7 @@ CreateThread(function()
     laptopSeller = CreatePed(0, modelHash, laptopSales.x, laptopSales.y, laptopSales.z -1, false, false)
     FreezeEntityPosition(laptopSeller, true)
     SetEntityInvincible(laptopSeller, true)
-
+    SetBlockingOfNonTemporaryEvents(laptopSeller, true)
       local options = {
       {
         name = 'laptopSales',
