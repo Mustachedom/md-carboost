@@ -10,7 +10,7 @@ lib.registerContext({
       title = 'Car Boost Tier D',
       description = 'Boost A Tier D Car',
       event = "md-carboost:client:getcopsd",
-      disabled = true,
+      arrow = true,
     },
     {
       title = 'Car Boost Tier C',
