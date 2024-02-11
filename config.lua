@@ -6,7 +6,7 @@ Config.ClassArep = 100
 Config.ClassBrep = 80
 Config.ClassCrep = 60
 Config.Vinscratchrep = 120
-Config.LaptopSale = vector3(483.74, -913.0, 35.97)
+Config.laptopSale = vector3(483.74, -913.0, 35.97)
 
 
 Config.ClassD = {
