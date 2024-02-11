@@ -107,7 +107,7 @@ end
 CreateThread(function()
     local modelHash = 'ig_priest'
     lib.requestModel(modelHash, 1000)
-    local laptopSales = config.laptopSale
+    local laptopSales = Config.LaptopSale
     laptopSeller = CreatePed(0, modelHash, laptopSales.x, laptopSales.y, laptopSales.z -1, false, false)
     FreezeEntityPosition(laptopSeller, true)
     SetEntityInvincible(laptopSeller, true)
